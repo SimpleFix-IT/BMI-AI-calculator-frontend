@@ -268,7 +268,7 @@ ul li {
 
   .category-grid {
     flex-direction: column;
-    align-items: center;
+    align-items: center; 
     gap: 15px;
   }
 
