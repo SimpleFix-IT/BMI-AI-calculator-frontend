@@ -124,19 +124,28 @@ const sendToAI = async () => {
       { category: 'Important Considerations', icon: 'fas fa-exclamation-triangle', class: 'important', advice: response.data.recommendation.important_considerations || [] }
     ];
   } catch (error) {
-    // Check for error details from the backend and display it
-    if (error.response?.data?.error) {
-      errorMessage.value = error.response.data.error;  // Display the main error
-      if (error.response.data.details) {
-        errorMessage.value += ` - ${error.response.data.details.error}: ${error.response.data.details.details}`;  // Display nested details
+      // Check for error details from the backend and display it
+      if (error.response?.data?.error) {
+          errorMessage.value = error.response.data.error;  // Display the main error
+          if (error.response.data.details) {
+              errorMessage.value += ` - ${error.response.data.details.error}: ${error.response.data.details.details}`;  // Display nested details
+          }
       }
-    } else {
-      errorMessage.value = "Something went wrong. Please try again.";
-    }
-    aiRecommendation.value = [];  // Clear AI recommendations in case of error
+      // Handle Laravel Validation Errors (422)
+      else if (error.response && error.response.status === 422) {
+          errorMessage.value = error.response.data.message;  // Corrected this line
+      } 
+      // General Error Handling
+      else {
+          errorMessage.value = "Something went wrong. Please try again.";
+      }
+
+      // Clear AI recommendations in case of error
+      aiRecommendation.value = [];
   } finally {
-    isLoading.value = false;
+      isLoading.value = false;
   }
+
 };
 </script>
 
@@ -456,5 +465,11 @@ button:disabled {
         /* Maintain Padding for Navbar */
     }
 }
-
+@media  (max-width: 320px) {
+    .ai-reco {
+    font-size: 1.3rem;
+    padding: 8px 12px;
+    margin-top: 20px;
+  }
+}
 </style>
