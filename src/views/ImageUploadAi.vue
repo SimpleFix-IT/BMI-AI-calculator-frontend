@@ -51,12 +51,17 @@
         </li>
       </ul>
     </div>
+    <div>
+      <ChatBot />
+    </div>
   </div>
 </template>
 
 <script setup>
 import { ref } from "vue";
 import apiClient from "@/servers/Index";
+import ChatBot from "@/components/ChatBot.vue";
+
 const file = ref(null);
 const filePreview = ref(null);
 const isLoading = ref(false);
@@ -103,7 +108,7 @@ const sendToAI = async () => {
       headers: {
         "Content-Type": "multipart/form-data",
       },
-    });
+    }); 
     // const response = await apiClient.post("/test", formData, {
     //   headers: {
     //     "Content-Type": "multipart/form-data",
