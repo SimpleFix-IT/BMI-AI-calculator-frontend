@@ -197,7 +197,7 @@ try {
   padding: 2rem;
   border-radius: 15px;
   width: 400px;
-  height: 525px; /* Set fixed height */
+  height: 609px; /* Set fixed height */
   text-align: center;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
   display: flex;
@@ -270,7 +270,9 @@ try {
  .obese {
   color: #f44336;
  }
-
+ input,select {
+  color: black!important;
+ }
 .ai-recommendation-card {
   position: relative;
   background: rgba(255, 255, 255, 0.2);
