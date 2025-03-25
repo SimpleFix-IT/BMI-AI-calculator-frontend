@@ -159,7 +159,9 @@
 .chat-input .loader {
     display: inline-block;
 }
-
+input{
+    color: black!important;
+}
 /* Responsive Design */
 @media (max-width: 768px) {
     .chat-ai {

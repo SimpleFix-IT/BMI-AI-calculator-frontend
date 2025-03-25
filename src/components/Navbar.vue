@@ -10,7 +10,7 @@
       <li><router-link to="/bmi">BMI Calculator</router-link></li>
       <li><router-link to="/about">About</router-link></li>
       <!-- <li><router-link to="/chat-with-ai">ChatBot</router-link></li> -->
-      <li><router-link to="/image-upload-ai">Image Upload</router-link></li>
+      <!-- <li><router-link to="/image-upload-ai">Image Upload</router-link></li> -->
     </ul>
 
     <button class="menu-btn" @click="toggleMenu">☰</button>
