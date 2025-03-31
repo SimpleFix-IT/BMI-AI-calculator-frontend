@@ -1,94 +1,66 @@
-BMI Project README
+Frontend README (for Vue.js)
+BMI AI Calculator Frontend
 📝 Introduction
-This project is a BMI Calculator powered by AI, providing users with personalized health insights based on their Body Mass Index (BMI). The application allows users to calculate their BMI, view health recommendations based on their measurements, and interact with an AI chatbot to get health-related advice.
+This is the frontend for the BMI AI Calculator, built using Vue.js. It allows users to calculate their BMI, receive personalized health recommendations based on their measurements, and interact with an AI-powered chatbot for health-related advice.
 
 🌟 Features
 Client-Side Features:
-1.BMI Calculator Section
+BMI Calculator Section:
 
-Users can enter their height and weight to calculate their BMI.
+Users can input their height and weight to calculate their BMI.
 
-Based on the BMI value, users will be categorized into one of the following four categories:
+The app categorizes the BMI into four categories: Underweight, Normal, Overweight, and Obese.
 
-Underweight
+AI Health Guidance:
 
-Normal
+Users can submit their height, weight, age, and gender to receive AI-driven health recommendations.
 
-Overweight
+Once the form is filled, users can click the Get AI Recommendation button to get personalized advice.
 
-Obese
+BMI About Section:
 
-2.AI Health Guidance
-
-Users can receive AI-driven health recommendations by submitting their height, weight, age, and gender.
-
-After filling in these details, users can click the Get AI Recommendation button to receive personalized health information.
-
-3.BMI About Section
-
-The About section provides users with detailed information about BMI, including what it is, how it's calculated, and its importance for health.
-
-Backend-Side Features:
-AI Health Recommendation
-
-When a user requests health recommendations, the backend sends the user's height, weight, age, and gender to the AI system.
-
-The AI processes the data and returns a response, which is then sent back to the client-side for display.
-
-Chatbot AI Feature
-
-Users can interact with a chatbot AI to ask health-related questions.
-
-The chatbot provides users with health-related information and answers any health queries the user may have.
-
-Tech Stack:
-Frontend: Vue.js
-
-Backend: Laravel
-
-AI: Google Gemini API (for health recommendations)
+Provides users with detailed information about BMI: what it is, how it's calculated, and its significance for health.
 
 ⚙️ Installation
 📥 Prerequisites:
-vue.js (for frontend)
+Node.js (for Vue.js)
 
-Laravel (for backend)
-
+NPM (for managing dependencies)
 
 💻 Steps to Install:
+Clone the Frontend Repository:
+
 bash
 Copy
 # Clone the frontend repository
 git clone https://github.com/kamalkant24/BMI-AI-calculator-frontend.git
 
-# Navigate to the project directory
-cd repo-name
+# Navigate to the Project Directory:
 
-# Install backend dependencies
-composer install
+bash
+Copy
+cd BMI-AI-calculator-frontend
+# Install Frontend Dependencies:
 
-# Install frontend dependencies
+bash
+Copy
 npm install
-# Run the frontend development server
+# Run the Development Server:
+
+bash
+Copy
 npm run dev
+The frontend will now be running on http://localhost:8080.
 
+📌 Technologies Used
+Frontend: Vue.js 3 (Composition API)
 
+API Communication: Axios (for interacting with the backend)
 
-# Clone the frontend repository
-git clone https://github.com/kamalkant24/BMI-AI-calculator.git
+Styling: CSS, Bootstrap
 
-# Navigate to the project directory
-cd repo-name
+Additional Notes:
+Make sure the backend is set up and running before starting the frontend.
 
-# Set up environment variables
-cp .env.example .env
-
-# Generate the Laravel application key
-php artisan key:generate
-
-# Run migrations to set up the database
-php artisan migrate
-
-# Start the backend server
-php artisan serve
+Update API endpoints in the Vue.js code if needed, depending on your backend configuration.
 
