@@ -1,41 +1,66 @@
-# bmi-calculator
+Frontend README (for Vue.js)
+BMI AI Calculator Frontend
+📝 Introduction
+This is the frontend for the BMI AI Calculator, built using Vue.js. It allows users to calculate their BMI, receive personalized health recommendations based on their measurements, and interact with an AI-powered chatbot for health-related advice.
 
-This template should help get you started developing with Vue 3 in Vite.
+🌟 Features
+Client-Side Features:
+BMI Calculator Section:
 
-## Recommended IDE Setup
+Users can input their height and weight to calculate their BMI.
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+The app categorizes the BMI into four categories: Underweight, Normal, Overweight, and Obese.
 
-## Customize configuration
+AI Health Guidance:
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+Users can submit their height, weight, age, and gender to receive AI-driven health recommendations.
 
-## Project Setup
+Once the form is filled, users can click the Get AI Recommendation button to get personalized advice.
 
-```sh
+BMI About Section:
+
+Provides users with detailed information about BMI: what it is, how it's calculated, and its significance for health.
+
+⚙️ Installation
+📥 Prerequisites:
+Node.js (for Vue.js)
+
+NPM (for managing dependencies)
+
+💻 Steps to Install:
+Clone the Frontend Repository:
+
+bash
+Copy
+# Clone the frontend repository
+git clone https://github.com/kamalkant24/BMI-AI-calculator-frontend.git
+
+# Navigate to the Project Directory:
+
+bash
+Copy
+cd BMI-AI-calculator-frontend
+# Install Frontend Dependencies:
+
+bash
+Copy
 npm install
-```
+# Run the Development Server:
 
-### Compile and Hot-Reload for Development
-
-```sh
+bash
+Copy
 npm run dev
-```
+The frontend will now be running on http://localhost:8080.
 
-### Compile and Minify for Production
+📌 Technologies Used
+Frontend: Vue.js 3 (Composition API)
 
-```sh
-npm run build
-```
+API Communication: Axios (for interacting with the backend)
 
-### Run Unit Tests with [Vitest](https://vitest.dev/)
+Styling: CSS, Bootstrap
 
-```sh
-npm run test:unit
-```
+Additional Notes:
+Make sure the backend is set up and running before starting the frontend.
 
-### Lint with [ESLint](https://eslint.org/)
+Update API endpoints in the Vue.js code if needed, depending on your backend configuration.
 
-```sh
-npm run lint
-```
